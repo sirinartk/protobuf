@@ -20,7 +20,7 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
-      <version>${protos.protobuf.version}</version>
+      <version>3.16.1</version>
     </dependency>
   </dependencies>
 
@@ -42,20 +42,20 @@
             <phase>generate-sources</phase>
             <configuration>
               <tasks>
-                <mkdir dir="target/generated-sources" />
+                <mkdir dir="target/generated-sources"/>
                 <exec executable="${protos.protoc.path}">
-                  <arg value="--java_out=target/generated-sources" />
-                  <arg value="--proto_path=src/proto" />
-                  <arg value="src/proto/google/protobuf/unittest_custom_options.proto" />
-                  <arg value="src/proto/google/protobuf/unittest_enormous_descriptor.proto" />
-                  <arg value="src/proto/google/protobuf/unittest_import.proto" />
-                  <arg value="src/proto/google/protobuf/unittest_import_public.proto" />
-                  <arg value="src/proto/google/protobuf/unittest_mset.proto" />
-                  <arg value="src/proto/google/protobuf/unittest_no_generic_services.proto" />
-                  <arg value="src/proto/com/google/protobuf/nested_builders_test.proto" />
-                  <arg value="src/proto/com/google/protobuf/nested_extension.proto" />
-                  <arg value="src/proto/com/google/protobuf/non_nested_extension.proto" />
-                  <arg value="src/proto/com/google/protobuf/test_bad_identifiers.proto" />
+                  <arg value="--java_out=target/generated-sources"/>
+                  <arg value="--proto_path=src/proto"/>
+                  <arg value="src/proto/google/protobuf/unittest_custom_options.proto"/>
+                  <arg value="src/proto/google/protobuf/unittest_enormous_descriptor.proto"/>
+                  <arg value="src/proto/google/protobuf/unittest_import.proto"/>
+                  <arg value="src/proto/google/protobuf/unittest_import_public.proto"/>
+                  <arg value="src/proto/google/protobuf/unittest_mset.proto"/>
+                  <arg value="src/proto/google/protobuf/unittest_no_generic_services.proto"/>
+                  <arg value="src/proto/com/google/protobuf/nested_builders_test.proto"/>
+                  <arg value="src/proto/com/google/protobuf/nested_extension.proto"/>
+                  <arg value="src/proto/com/google/protobuf/non_nested_extension.proto"/>
+                  <arg value="src/proto/com/google/protobuf/test_bad_identifiers.proto"/>
                 </exec>
               </tasks>
               <sourceRoot>target/generated-sources</sourceRoot>
